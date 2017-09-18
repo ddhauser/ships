@@ -29,7 +29,7 @@ router.get('/points', (req, res) => {
 router.get('/biggest', (req, res) => {
   // Get vessel with the biggest 'size' property, where size is a number
   const biggest = vesselInfo
-    .filter(v => !isNaN(v.size))
+    .filter(v => !Number.isNaN(v.size))
     .reduce((v1, v2) => (v1.size > v2.size ? v1 : v2), {
       size: Number.NEGATIVE_INFINITY,
     });
