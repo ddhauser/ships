@@ -20,22 +20,22 @@ ship-data {
     display: block;
 }
 
-ship-data > .actions button{
+ship-data>.actions button {
     float: left;
     padding: 5px;
     margin: 5px;
+    width: 6em;
     border: 1px solid rgb(100, 140, 150);
     background-color: rgb(100, 180, 150);
-    width: 6em;
 }
 
-ship-data > .actions button:hover {
+ship-data>.actions button:hover {
     border: 1px solid rgba(100, 140, 150, 0.8);
-    background-color: rgba(100, 180, 150,0.8);
+    background-color: rgba(100, 180, 150, 0.8);
     cursor: pointer;
 }
 
-ship-data > .actions button:last-child{
+ship-data>.actions button:last-child {
     float: right;
 }
 
@@ -46,10 +46,8 @@ ship-data-item {
 
 ships-queries {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
     margin: 10px;
+    z-index: 1;
 }
 
 .pull-right {
@@ -95,7 +93,8 @@ ships-queries {
 }
 
 .fab.fab-item:hover {
-    background: #ababab
+    background: #ababab;
+    border: 5px solid #B4B4B4;
 }
 
 .fab-item.show {
@@ -111,8 +110,8 @@ ships-queries {
     bottom: 25%;
     font-weight: 600;
     font-size: 0.35em;
-    border-radius: 2px;
-    background: #585858;
+    border-radius: 10px;
+    background: #AA9A9A;
     margin-left: 12px;
     padding: 5px 7px;
     position: absolute;

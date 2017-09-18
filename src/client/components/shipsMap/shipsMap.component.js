@@ -1,5 +1,5 @@
 angular.module('app').component('shipsMap', {
-    template: '<div class="map"></div>',
+    template: '<div class="map"><h1>Loading map...</h1></div>',
     bindings: {
         onMapLoaded: '&?',
         /* A google.maps.MapOptions object */
