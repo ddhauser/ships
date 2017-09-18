@@ -1,0 +1,13 @@
+<div ng-if="!$ctrl.data">Loading...</div>
+
+<ship-data-item ng-repeat="(key, value) in $ctrl.data" 
+    in-edit-mode="$ctrl.edit" 
+    name="key" value="value" 
+    on-value-changed="$ctrl.data[key] = $newValue">
+</ship-data-item>
+
+<div ng-if="$ctrl.data" class="actions">
+    <button ng-hide="$ctrl.edit" ng-click="$ctrl.startEdit()">edit</button>
+    <button ng-show="$ctrl.edit" ng-click="$ctrl.cancelEdit()">cancel</button>
+    <button ng-show="$ctrl.edit" ng-click="$ctrl.save()">save</button>
+</div>

@@ -1,0 +1,17 @@
+{
+  "name": "ships",
+  "version": "1.0.0",
+  "description": "get ships location and data",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Write some tests!\""
+  },
+  "author": "Daniel Hauser",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
+}

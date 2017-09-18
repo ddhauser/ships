@@ -1,0 +1,12 @@
+
+    <span class="fab fab-main" tooltip="Queries" ng-click="$ctrl.isOpen = !$ctrl.isOpen">
+        <b>Q</b>
+    </span>
+    <span ng-repeat="query in $ctrl.queries" 
+        class="fab fab-item"
+        ng-if="$ctrl.isOpen"
+        ng-click="query.toggle()"
+        tooltip="{{query.text}}"
+        ng-class="{show : $ctrl.isOpen}"
+        ng-style=" query.active && {'background-color' : query.color }">
+    </span>

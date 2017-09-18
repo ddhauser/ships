@@ -1,0 +1,27 @@
+
+<span ng-if="!$ctrl.isObject($ctrl.value)">
+    <b>{{$ctrl.name}}</b>
+
+    <span ng-if="!$ctrl.inEditMode" 
+        ng-class=":: {
+            'dimmed' : !$ctrl.valueExists($ctrl.value)
+        }" 
+        class="pull-right">
+        {{:: $ctrl.valueExists($ctrl.value) ? $ctrl.value : 'NO_DATA' }}
+    </span>
+
+    <input type="text"
+        ng-if="$ctrl.inEditMode" 
+        ng-model="$ctrl.value"
+        placeholder="{{::  $ctrl.valueExists($ctrl.value) ? $ctrl.value : 'NO_DATA' }}"
+        class="pull-right">
+</span>
+
+<span ng-if="$ctrl.isObject($ctrl.value)">
+    <ship-data-item ng-repeat="(key, value) in $ctrl.value" 
+        in-edit-mode="$ctrl.inEditMode" 
+        name="$ctrl.name + ':' + key" 
+        value="value" 
+        on-value-changed="$ctrl.value[key] = $newValue" >
+    </ship-data-item>
+</span>

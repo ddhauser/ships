@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ships</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div ng-app="app">
+        <ships-queries map="$ctrl.map"></ships-queries>
+        <ships-map on-map-loaded="$ctrl.map = $map" options="{
+                  center: { lat: 39, lng: 22 },
+                  zoom : 5
+                }">
+        </ships-map>
+    </div>
+
+    <script src="scripts/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="types/Query.js"></script>
+    <script src="services/googleMapsAPI.service.js"></script>
+    <script src="services/shipsAPI.service.js"></script>
+    <script src="components/shipsMap/shipsMap.component.js"></script>
+    <script src="components/shipData/shipData.component.js"></script>
+    <script src="components/shipDataItem/shipDataItem.component.js"></script>
+    <script src="components/shipsQueries/shipsQueries.component.js"></script>
+
+</body>
+
+</html>
