@@ -1,4 +1,4 @@
-
+<span ng-if="$ctrl.map">
     <span class="fab fab-main" tooltip="Queries" ng-click="$ctrl.isOpen = !$ctrl.isOpen">
         <b>Q</b>
     </span>
@@ -10,3 +10,4 @@
         ng-class="{show : $ctrl.isOpen}"
         ng-style=" query.active && {'background-color' : query.color }">
     </span>
+</span>
