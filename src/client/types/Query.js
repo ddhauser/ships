@@ -35,7 +35,7 @@ angular.module('app').constant(
       })
         .then((features) => {
           this.active = newState;
-          
+
           if (this.active) zoomTo(features);
         });
     };
