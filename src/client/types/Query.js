@@ -18,11 +18,11 @@ angular.module('app').constant(
     this.text = text;
 
     this.toggle = () => {
-      this.active = !this.active;
+      const newState = !this.active;
 
       getFeatures().then((features) => {
         features.forEach((feature) => {
-          if (this.active) {
+          if (newState) {
             feature.setProperty('strokeColor', this.color);
             feature.setProperty('scale', 5);
           } else {
@@ -34,6 +34,8 @@ angular.module('app').constant(
         return features;
       })
         .then((features) => {
+          this.active = newState;
+          
           if (this.active) zoomTo(features);
         });
     };
