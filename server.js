@@ -4,7 +4,7 @@ const app = express();
 
 const ships = require('./src/api/ships.js');
 
-const port = 5858;
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => console.log(`listening on port ${port}!`));
 
