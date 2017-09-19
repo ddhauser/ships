@@ -7,8 +7,8 @@ angular.module('app').component('shipsQueries', {
     this.queries = [];
 
     /**
-         * Add a new query
-         */
+     * Add a new query
+     */
     this.addQuery = query => query instanceof Query && this.queries.push(query);
 
     this.$onInit = () => {

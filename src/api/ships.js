@@ -28,7 +28,7 @@ router.get('/points', (req, res) => {
  */
 router.get('/biggest', (req, res) => {
   const EPMTY = {
-    size: Number.NEGATIVE_INFINITY 
+    size: Number.NEGATIVE_INFINITY,
   };
 
   // Get vessel with the biggest 'size' property, where size is a number
