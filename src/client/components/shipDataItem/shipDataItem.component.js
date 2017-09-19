@@ -16,8 +16,8 @@ angular.module('app').component('shipDataItem', {
 
     this.$onInit = () => {
       /**
-             * Notify when value changes
-             */
+       * Notify when value changes
+       */
       $scope.$watch(
         () => this.value,
         (value) => {

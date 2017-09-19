@@ -30,9 +30,9 @@ angular.module('app').component('shipData', {
           originalData = angular.merge({}, this.data);
 
           this.edit = false;
-        })
-        .catch((err) => {
+        }, (err) => {
           // TODO: an error can be either a network error or a server validation error
+          //  For now, as we have no validation logic, we can leave it for later
 
           console.error(`Error saving ship-data, ship=${this.data._id}`, err);
         });

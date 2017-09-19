@@ -17,7 +17,7 @@ angular.module('app').component('shipsMap', {
 
       return {
         icon: angular.extend(defaultIcon, {
-          // Add any relevant feature propertis (if any)
+          // Add any relevant feature properties (if any)
           rotation: feature.getProperty('course') || defaultIcon.rotation,
           strokeColor: feature.getProperty('strokeColor') || defaultIcon.strokeColor,
           scale: feature.getProperty('scale') || defaultIcon.scale,

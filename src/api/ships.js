@@ -27,13 +27,13 @@ router.get('/points', (req, res) => {
  * Get biggest ship
  */
 router.get('/biggest', (req, res) => {
-  const EPMTY = {
+  const EMPTY = {
     size: Number.NEGATIVE_INFINITY,
   };
 
   // Get vessel with the biggest 'size' property, where size is a number
   const vesselsWithSize = vesselInfo.filter(v => !isNaN(v.size));
-  const biggest = vesselsWithSize.reduce((v1, v2) => (v1.size > v2.size ? v1 : v2), EPMTY);
+  const biggest = vesselsWithSize.reduce((v1, v2) => (v1.size > v2.size ? v1 : v2), EMPTY);
 
   // If no vessel found, _id is undefined
   if (biggest._id) {
