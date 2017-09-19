@@ -15,7 +15,7 @@ angular.module('app').component('shipsQueries', {
       googleMapsAPI.get().then((google) => {
         this.addQuery(new Query({
           color: 'green',
-          text: 'find biggest ship',
+          text: 'Find biggest ship',
           getFeatures: () => shipsAPI.getBiggestShip().then(ship => [this.map.data.getFeatureById(ship._id)]),
           zoomTo: features => this.map.setCenter(features[0].getGeometry().get()),
         }));
@@ -23,7 +23,7 @@ angular.module('app').component('shipsQueries', {
         const bounds = new google.maps.LatLngBounds({ lng: 28, lat: 40 }, { lng: 30, lat: 42 });
         this.addQuery(new Query({
           color: 'blue',
-          text: `ships in area ${bounds.toString()}`,
+          text: `Ships in area ${bounds.toString()}`,
           getFeatures: () => {
             const features = [];
 
