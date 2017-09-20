@@ -1,6 +1,8 @@
 # ships - Show ships on a map
 
 ## Usage
+[Demo](https://ships-project.herokuapp.com/)
+
 ### Requirements
 * [NodeJS](http://nodejs.org/) (with [NPM](https://www.npmjs.org/))
 * A real Browser (such as [Chrome](https://www.google.com/chrome) or [Firefox](https://www.mozilla.org/en-US/firefox)) 
